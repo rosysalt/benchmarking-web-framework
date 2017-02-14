@@ -1,8 +1,6 @@
-# TESTING_APP = 'rack'
-TESTING_APP = 'rack-app'
+require_relative 'environment'
 
-# require "#{TESTING_APP}/application"
+puts ENV['RACK_ENV']
+puts 'XXXXX'
 
-require File.join(Dir.pwd, "#{TESTING_APP}", 'application')
-
-run Application
+run Benchmarker.application
