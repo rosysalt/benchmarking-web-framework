@@ -3,6 +3,7 @@ gem 'bundler'
 
 gem 'rack-app'
 gem 'roda'
+gem 'cuba'
 
 group :test, :development do
   gem 'pry-byebug'
