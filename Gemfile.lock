@@ -19,6 +19,9 @@ GEM
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     method_source (0.8.2)
+    nancy (0.3.0)
+      rack
+      tilt
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -49,6 +52,7 @@ GEM
     rspec-support (3.5.0)
     safe_yaml (1.0.4)
     slop (3.6.0)
+    tilt (2.0.6)
     url_mount (0.2.1)
       rack
     webmock (2.3.2)
@@ -63,6 +67,7 @@ DEPENDENCIES
   bundler
   cuba
   hanami-router
+  nancy
   pry-byebug
   rack-app
   rack-test

@@ -5,6 +5,7 @@ gem 'rack-app'
 gem 'roda'
 gem 'cuba'
 gem 'hanami-router'
+gem 'nancy'
 
 group :test, :development do
   gem 'pry-byebug'
