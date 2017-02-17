@@ -4,6 +4,7 @@ require_relative 'post'
 
 require_relative 'v0/get_index'
 require_relative 'v0/get_show'
+require_relative 'v0/tea'
 
 module Benchmarker
   class Application < Rack::App
@@ -13,6 +14,10 @@ module Benchmarker
     namespace '/v0' do
       mount V0::GetIndex
       mount V0::GetShow
+
+      namespace '/tea' do
+        mount V0::Tea
+      end
     end
 
     after do
