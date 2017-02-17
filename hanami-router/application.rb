@@ -1,29 +1,12 @@
+require_relative 'get'
+require_relative 'post'
+
 module Benchmarker
   Application = Hanami::Router.new do
-    get '/books', to: ->(env) do
-      [
-        200,
-        {},
-        ['Hello World!']
-      ]
-    end
+    get '/books', to: ->(env) { Get.index(env) }
 
-    get '/books/:id', to: ->(env) do
-      [
-        200,
-        {},
-        ["Routing parameter = #{ env['router.params'][:id] }"]
-      ]
-    end
+    get '/books/:id', to: ->(env) { Get.show(env) }
 
-    post '/books', to: ->(env) do
-      request = Rack::Request.new(env)
-      json_body = Rack::Utils.parse_nested_query(request.body.read).to_json
-      [
-        200,
-        {'Content-Type' => 'application/json'},
-        [json_body]
-      ]
-    end
+    post '/books', to: ->(env) { Post.post(env) }
   end
 end
