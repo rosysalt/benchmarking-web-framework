@@ -6,6 +6,7 @@ gem 'roda'
 gem 'cuba'
 gem 'hanami-router'
 gem 'nancy'
+gem 'hobbit'
 
 group :test, :development do
   gem 'pry-byebug'
