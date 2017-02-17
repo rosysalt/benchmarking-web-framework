@@ -38,7 +38,6 @@ module Benchmarker
           [json_body.to_json]
         ]
       else
-        debugger
         [
           404,
           {"Content-Type" => "text/html"},
