@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-describe 'test rack-app', type: :request do
+describe 'test app', type: :request do
     before do
       get url
     end

@@ -5,7 +5,12 @@ Bundler.require(:default, ENV['RACK_ENV'])
 # TESTING_APP = 'rack'
 # TESTING_APP = 'rack-app'
 # TESTING_APP = 'roda'
-TESTING_APP = 'cuba'
+# TESTING_APP = 'cuba'
+TESTING_APP ||= ENV['TESTING_APP'] || 'cuba'
+
+puts '==============='
+puts "Running #{TESTING_APP}"
+puts '==============='
 
 require File.join(Dir.pwd, "#{TESTING_APP}", 'application')
 
