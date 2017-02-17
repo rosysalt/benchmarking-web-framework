@@ -1,5 +1,4 @@
-require_relative 'get'
-require_relative 'post'
+require_relative 'books'
 
 module Benchmarker
   class Application < Nancy::Base
@@ -7,13 +6,8 @@ module Benchmarker
       only 1 file per resources
     DOC
 
-    post '/books' do
-      response['Content-Type'] = 'application/json'
-      Rack::Utils.parse_nested_query(request.body.read).to_json
-    end
-
     map '/' do
-      run Get
+      run Books
     end
   end
 end

@@ -1,0 +1,84 @@
+/Users/quynhnguyen/code/benchmark-web-framework/config.ru
+******************************       CONFIG       ******************************
+wrk --threads 2 --duration 10 http://localhost:9292/
+Running 10s test @ http://localhost:9292/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.47ms    0.98ms  18.47ms   77.48%
+    Req/Sec     3.60k   443.65     7.76k    88.06%
+  72031 requests in 10.10s, 5.84MB read
+  Non-2xx or 3xx responses: 72031
+Requests/sec:   7132.16
+Transfer/sec:    592.02KB
+/Users/quynhnguyen/code/benchmark-web-framework/config.ru
+******************************       CONFIG       ******************************
+wrk --threads 2 --duration 10 http://localhost:9292/
+Running 10s test @ http://localhost:9292/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.39ms  845.38us   9.91ms   72.61%
+    Req/Sec     3.76k   366.48     7.63k    89.55%
+  75148 requests in 10.10s, 6.09MB read
+  Non-2xx or 3xx responses: 75148
+Requests/sec:   7440.45
+Transfer/sec:    617.62KB
+/Users/quynhnguyen/code/benchmark-web-framework/config.ru
+******************************       CONFIG       ******************************
+wrk --threads 2 --duration 10 http://localhost:9292/
+Running 10s test @ http://localhost:9292/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.77ms    3.85ms  61.58ms   92.46%
+    Req/Sec     2.49k     0.86k    3.92k    60.00%
+  49550 requests in 10.01s, 4.02MB read
+  Non-2xx or 3xx responses: 49550
+Requests/sec:   4950.65
+Transfer/sec:    410.94KB
+/Users/quynhnguyen/code/benchmark-web-framework/config.ru
+******************************       CONFIG       ******************************
+wrk --threads 2 --duration 10 http://localhost:9292/
+Running 10s test @ http://localhost:9292/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.73ms    1.31ms  15.91ms   81.21%
+    Req/Sec     3.19k   546.80     4.08k    65.50%
+  63421 requests in 10.00s, 5.14MB read
+  Non-2xx or 3xx responses: 63421
+Requests/sec:   6340.82
+Transfer/sec:    526.34KB
+/Users/quynhnguyen/code/benchmark-web-framework/config.ru
+******************************       CONFIG       ******************************
+wrk --threads 2 --duration 10 http://localhost:9292/
+Running 10s test @ http://localhost:9292/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.73ms    1.33ms  21.79ms   82.58%
+    Req/Sec     3.18k   582.69     7.51k    70.15%
+  63685 requests in 10.10s, 5.16MB read
+  Non-2xx or 3xx responses: 63685
+Requests/sec:   6305.50
+Transfer/sec:    523.41KB
+/Users/quynhnguyen/code/benchmark-web-framework/config.ru
+******************************       CONFIG       ******************************
+wrk --threads 2 --duration 10 http://localhost:9292/
+Running 10s test @ http://localhost:9292/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.74ms    1.39ms  24.29ms   84.17%
+    Req/Sec     3.18k   545.54     4.11k    68.32%
+  63991 requests in 10.10s, 5.19MB read
+  Non-2xx or 3xx responses: 63991
+Requests/sec:   6334.75
+Transfer/sec:    525.83KB
+/Users/quynhnguyen/code/benchmark-web-framework/config.ru
+******************************       CONFIG       ******************************
+wrk --threads 2 --duration 10 http://localhost:9292/
+Running 10s test @ http://localhost:9292/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.67ms    1.53ms  44.40ms   89.75%
+    Req/Sec     3.37k   618.08     4.14k    83.50%
+  67181 requests in 10.01s, 5.45MB read
+  Non-2xx or 3xx responses: 67181
+Requests/sec:   6714.38
+Transfer/sec:    557.35KB
