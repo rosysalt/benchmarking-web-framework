@@ -4,6 +4,7 @@ gem 'bundler'
 gem 'rack-app'
 gem 'roda'
 gem 'cuba'
+gem 'hanami-router'
 
 group :test, :development do
   gem 'pry-byebug'
