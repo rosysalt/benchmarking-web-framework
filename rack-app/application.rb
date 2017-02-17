@@ -2,10 +2,18 @@ require 'rack/app'
 require_relative 'get'
 require_relative 'post'
 
+require_relative 'v0/get_index'
+require_relative 'v0/get_show'
+
 module Benchmarker
   class Application < Rack::App
-    mount Benchmarker::Get
-    mount Benchmarker::Post
+    mount Get
+    mount Post
+
+    namespace '/v0' do
+      mount V0::GetIndex
+      mount V0::GetShow
+    end
 
     after do
       puts "\nXXXX After Application XXXX\n"
