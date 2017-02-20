@@ -40,15 +40,13 @@ class BenchmarkerPost < Benchmarker
   end
 end
 
+FRAMEWORKS = %i(grape)
+
 FRAMEWORKS.each do |app|
+  Experiment.new(BenchmarkerGet, app, "get")
+  Experiment.new(BenchmarkerGetDynamic, app, "get_dynamic")
   Experiment.new(BenchmarkerPost, app, "post")
 end
-
-# FRAMEWORKS.each do |app|
-#   Experiment.new(BenchmarkerGet, app, "get")
-#   Experiment.new(BenchmarkerGetDynamic, app, "get_dynamic")
-#   Experiment.new(BenchmarkerPost, app, "post")
-# end
 
 # Copy the experiment result to plot directory for visualization
 Dir.glob('results/summary/*.txt').each do |f|

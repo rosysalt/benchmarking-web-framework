@@ -8,6 +8,9 @@ set style data histograms
 set yrange [0:10000]
 set xtics rotate by -45
 
-plot 'plot/data/get.txt' using 2:3:xtic(1) ti "GET" linestyle 1, \
+set title "Average number of requests per second"
+set xlabel "Ruby web frameworks"
+
+plot 'plot/data/get.txt' using 2:3:xtic(1) ti "GET (books)" linestyle 1, \
      'plot/data/get_dynamic.txt' using 2:3:xtic(1) ti "GET Dynamic (books/:id)" linestyle 2, \
-     'plot/data/post.txt' using 2:3:xtic(1) ti "POST" linestyle 3
+     'plot/data/post.txt' using 2:3:xtic(1) ti "POST (books)" linestyle 3

@@ -16,6 +16,15 @@ Tasks:
 
 All the web framework are tested against 3 tasks. And to make the result fair, each task is run 10 times for each web framework.
 
+### Results
+
+Text result: `plot/data`
+
+Visualization
+![alt text][viz]
+
+[viz]: https://github.com/npxquynh/benchmarking-web-framework/blob/master/plot/throughput_webframework.png "Number of requests per second between Ruby web frameworks"
+
 ### How to run the experiment
 ```
 sh simulation.sh
