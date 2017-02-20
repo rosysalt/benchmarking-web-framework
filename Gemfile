@@ -9,6 +9,7 @@ gem 'cuba'
 gem 'hanami-router'
 gem 'nancy'
 gem 'hobbit'
+gem 'grape'
 
 group :test, :development do
   gem 'pry-byebug'

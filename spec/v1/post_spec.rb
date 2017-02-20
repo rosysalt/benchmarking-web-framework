@@ -30,6 +30,7 @@ describe 'test post method', type: :request do
     let(:url) { '/books' }
 
     it do
+      # debugger
       expect(last_response.ok?).to be_truthy
       expect(last_response.header['Content-Type']).to eq('application/json')
 
