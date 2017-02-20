@@ -1,7 +1,10 @@
 require_relative 'table_helpers'
+require_relative 'statistic'
 
 class SpeedSummaryTable
   include TableHelpers
+  include Statistic
+
   attr_accessor :content # content: output from wrk, stripped a bit
 
   def initialize(content)
@@ -17,6 +20,27 @@ class SpeedSummaryTable
 
   def render
     summary_table.join("\n")
+  end
+
+  def statistical_metrics
+    summary = []
+    summary << ['Average', 'Std', 'Max', 'Min'].join("\t")
+    summary << statistical_metrics_table
+  end
+
+  def statistical_metrics_table
+    numbers = results.map { |pair| pair[1].to_f.round(2) }
+    result = []
+    result << Statistic.mean(numbers).round(2)
+    result << Statistic.standard_deviation(numbers).round(2)
+    result << numbers.max
+    result << numbers.min
+
+    result.join("\t")
+  end
+
+  def render_statistical_metrics
+    statistical_metrics.join("\n")
   end
 
   def lines

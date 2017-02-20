@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 gem 'bundler'
 
+gem 'json'
+
 gem 'rack-app'
 gem 'roda'
 gem 'cuba'

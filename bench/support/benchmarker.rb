@@ -23,6 +23,7 @@ class Benchmarker
 
   def frameworkname
     File.basename(config).gsub(".ru", '').upcase
+    ENV['TESTING_APP']
   end
 
   def start_puma
