@@ -8,6 +8,7 @@ Web frameworks to test:
 - [hobbit](https://github.com/patriciomacadden/hobbit)
 - [cuba](https://github.com/soveran/cuba)
 - [nancy](https://github.com/guilleiguaran/nancy)
+- [grape](https://github.com/ruby-grape/grape)
 
 Tasks:
 - Basic GET request (/books)
@@ -15,6 +16,8 @@ Tasks:
 - POST
 
 All the web framework are tested against 3 tasks. And to make the result fair, each task is run 10 times for each web framework.
+
+The estimated run time is 8 frameworks x 3 tasks x 10 repetitions x 13 seconds each ~ 3120 seconds ~ 52 minutes
 
 ### Results
 

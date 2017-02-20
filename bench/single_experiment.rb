@@ -35,17 +35,19 @@ class Experiment
     content = %x(egrep '\\*|Request' "#{output_path}")
 
     summary_table = SpeedSummaryTable.new(content)
-    summary_output_path = "results/summary/#{prefix}/#{framework_name}"
 
-    File.open(summary_output_path, 'w') do |f|
-      f.puts summary_table.render_statistical_metrics
-    end
-
+    # write raw experiment results
     File.open("#{output_path}_summary.md", 'w') do |f|
       f.puts summary_table.render_markdown
     end
 
+    # calculate statistical metrics for all the repetitions
     puts summary_table.render_statistical_metrics
+    summary_output_path = "results/#{framework_name}/#{prefix}.stat"
+
+    File.open(summary_output_path, 'w') do |f|
+      f.puts summary_table.render_statistical_metrics
+    end
 
     # append to summary file
     summary_for_all_output_path = "results/summary/#{prefix}.txt"

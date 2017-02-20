@@ -3,7 +3,7 @@ require_relative 'single_experiment'
 
 require 'fileutils'
 
-FRAMEWORKS = %i(cuba hanami-router hobbit nancy rack rack-app roda)
+FRAMEWORKS = %i(cuba grape hanami-router hobbit nancy rack rack-app roda)
 
 # Create directory if not existed
 FRAMEWORKS.each do |fw|
