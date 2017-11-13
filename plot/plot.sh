@@ -5,7 +5,7 @@ set style fill solid
 set style histogram errorbars gap 2 lw 1
 set style data histograms
 
-set yrange [0:10000]
+set yrange [0:12000]
 set xtics rotate by -45
 
 set title "Average number of requests per second"

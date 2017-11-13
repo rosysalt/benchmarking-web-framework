@@ -3,7 +3,7 @@ require_relative 'single_experiment'
 
 require 'fileutils'
 
-FRAMEWORKS = %i(cuba grape hanami-router hobbit nancy rack rack-app roda)
+FRAMEWORKS = %i(cuba grape rails hanami-router hobbit nancy rack rack-app roda)
 
 # Create directory if not existed
 FRAMEWORKS.each do |fw|
@@ -24,23 +24,21 @@ end
 # Run the experiment
 class BenchmarkerGet < Benchmarker
   def wrk_command
-    "wrk --threads 2 --duration 10 http://localhost:9292/books"
+    "wrk --threads 2 --duration 1 http://localhost:9292/books"
   end
 end
 
 class BenchmarkerGetDynamic < Benchmarker
   def wrk_command
-    "wrk --threads 2 --duration 10 http://localhost:9292/books/3"
+    "wrk --threads 2 --duration 1 http://localhost:9292/books/3"
   end
 end
 
 class BenchmarkerPost < Benchmarker
   def wrk_command
-    "wrk --threads 2 --duration 10 -s ./scripts/post.lua http://localhost:9292/books"
+    "wrk --threads 2 --duration 1 -s ./scripts/post.lua http://localhost:9292/books"
   end
 end
-
-FRAMEWORKS = %i(grape)
 
 FRAMEWORKS.each do |app|
   Experiment.new(BenchmarkerGet, app, "get")

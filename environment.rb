@@ -7,7 +7,7 @@ Bundler.require(:default, ENV['RACK_ENV'])
 # TESTING_APP = 'roda'
 # TESTING_APP = 'cuba'
 # TESTING_APP = 'hanami-router'
-TESTING_APP ||= ENV['TESTING_APP'] || 'cuba'
+TESTING_APP ||= ENV['TESTING_APP'] || 'rails'
 
 puts '==============='
 puts "Running #{TESTING_APP}"
